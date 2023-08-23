@@ -53,7 +53,7 @@ export class News extends Component {
     }
 
     handleNextClick =async ()=>{
-      let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f0970274ad2241d68a2e92502eb64d75&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
+      let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f03440274ad2241d68a2e92502eb64d75&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
       this.setState({loading:true})
       let data = await fetch(url)
       let parsedData = await data.json()
