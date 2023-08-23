@@ -31,7 +31,7 @@ export class News extends Component {
   }
 
   async componentDidMount(){
-      let url =`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f0970274ad2241d68a2e92502eb64d75&pageSize=${this.props.pageSize}`;
+      let url =`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f0453ttgg7ggttgd2241d68dbf02eb64&pageSize=${this.props.pageSize}`;
       this.setState({loading:true})
       let data = await fetch(url)
       console.log("Api called")
@@ -40,7 +40,7 @@ export class News extends Component {
     
     } 
     handlePrevClick = async ()=>{
-      let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f0970274ad2241d68a2e92502eb64d75&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
+      let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f097fnnnhd2241d6fdnhgne9550dg64d75&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
       this.setState({loading:true})
       let data = await fetch(url)
       console.log("Api called")
@@ -66,7 +66,7 @@ export class News extends Component {
 
     fetchMoreData= async()=>{
       this.setState({page: this.page +1})
-      let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f0970274ad2241d68a2e92502eb64d75&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
+      let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f034t027fkfbjkjewf23345wf2eb64d75&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
       this.setState({loading:true})
       let data = await fetch(url)
       let parsedData = await data.json()
